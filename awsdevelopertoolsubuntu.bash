@@ -8,6 +8,8 @@ sudo apt autoremove -y
 echo "Installing curl"
 sudo apt install curl -y
 
+echo "Installing GIT"
+sudo apt install git
 
 echo "installing Nodejs"
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
@@ -29,13 +31,13 @@ sudo apt install docker.io -y
 echo "Installing SAM"
 wget https://github.com/aws/aws-sam-cli/releases/latest/download/aws-sam-cli-linux-x86_64.zip
 unzip aws-sam-cli-linux-x86_64.zip -d sam-installation
-sudo ./sam-installation/install -A
+sudo ./sam-installation/install
 
 
 echo "Installing AWS CLI"
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
-sudo ./aws/install -A
+sudo ./aws/install
 
 sudo apt update -y
 sudo apt dist-upgrade -y
